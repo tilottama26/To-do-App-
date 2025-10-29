@@ -22,35 +22,47 @@ The web application is divided into two main components - the primary web applic
 
 ## Features:
 
-## Frontend Features:
+### Frontend Features:
 
-1. Responsive Design
-   Mobile-friendly with CSS Grid and Flexbox
-   Breakpoints for tablets and phones 
-2. User Experience
-   Smooth animations and transitions
-   Real-time task filtering
-   Inline editing with modal
-   Color-coded task status
-   Overdue task highlighting
-3. API Communication
-   RESTful API design
-   JSON data format
-   Async/await pattern for smooth UX
-   Error handling with user feedback
+1. Responsive Design -
+   Mobile-friendly with CSS Grid and Flexbox.
+   Breakpoints for tablets and phones. 
+2. User Experience -
+   Smooth animations and transitions.
+   Real-time task filtering.
+   Inline editing with modal.
+   Color-coded task status.
+   Overdue task highlighting.
+3. API Communication -
+   RESTful API design.
+   JSON data format.
+   Async/await pattern for smooth UX.
+   Error handling with user feedback.
 
-## Security Features:
-  1. Each user only sees their own tasks
-  2. Secure cookies with Flask-Login for session management
-  3. Built into Flask forms
-  4. SQLAlchemy ORM parameterized queries for SQL Injection prevention
+### Security Features:
+  1. Each user only sees their own tasks.
+  2. Secure cookies with Flask-Login for session management.
+  3. Built into Flask forms.
+  4. SQLAlchemy ORM parameterized queries for SQL Injection prevention.
 
 ## Folder Structure:
 
-
+```` ``` `
+TODO-APP\
+  __pycache__\
+    models.cpython-312.pyc
+    scheduler.cpython-312.pyc
+  templates\
+    dashboard.html
+    index.html
+  venv\
+  app.py\
+  models.py\
+  requirements.txt\
+  scheduler.py
 
 ## Installation & Setup:
-## Pre-requisites - Python 3.8+, MySQL Server, pip (Python Package Manager)
+### Pre-requisites - Python 3.8+, MySQL Server, pip (Python Package Manager)
 
 ### Step 01: Create a project directory titled 'to-do app' and add all the files.
   1. app.py
