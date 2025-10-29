@@ -1,7 +1,7 @@
-## To-do-App
+# To-do-App
 A full-stack to-do application with automated email reminders. The application includes user authentication, complete CRUD operations, and a background job scheduler for sending email reminders 30 minutes before task due times.
 
-# Tech Stack used: 
+## Tech Stack used: 
 
 Frontend - HTML5, CSS3, JavaScript
 
@@ -17,13 +17,42 @@ Database -
   2. SQLAlchemy - ORM (Object Relational Mapper) for database operations
   3. PyMySQL - MySQL database connector
 
-# Architecture Overview: 
+## Architecture Overview: 
 The web application is divided into two main components - the primary web application flow and background job processing. On the front end, users interact through a browser using HTML, CSS, and JavaScript, which communicates with a Flask server via HTTP. The Flask server, built in Python, handles requests and connects to a MySQL database using SQL for data storage and retrieval. The database serves as a shared resource between the server and MySQL. Separately, background jobs are managed by APScheduler, which automates tasks like sending emails and reminders, ensuring asynchronous operations run smoothly without interrupting the main application flow. This setup highlights a clean separation between user-facing interactions and backend automation.
 
-# Installation & Setup:
-# Pre-requisites - Python 3.8+, MySQL Server, pip (Python Package Manager)
+## Features:
 
-# Step 01: Create a project directory titled 'to-do app' and add all the files.
+## Frontend Features:
+
+1. Responsive Design
+   Mobile-friendly with CSS Grid and Flexbox
+   Breakpoints for tablets and phones 
+2. User Experience
+   Smooth animations and transitions
+   Real-time task filtering
+   Inline editing with modal
+   Color-coded task status
+   Overdue task highlighting
+3. API Communication
+   RESTful API design
+   JSON data format
+   Async/await pattern for smooth UX
+   Error handling with user feedback
+
+## Security Features:
+  1. Each user only sees their own tasks
+  2. Secure cookies with Flask-Login for session management
+  3. Built into Flask forms
+  4. SQLAlchemy ORM parameterized queries for SQL Injection prevention
+
+## Folder Structure:
+
+
+
+## Installation & Setup:
+## Pre-requisites - Python 3.8+, MySQL Server, pip (Python Package Manager)
+
+### Step 01: Create a project directory titled 'to-do app' and add all the files.
   1. app.py
   2. models.py
   3. scheduler.py
@@ -34,7 +63,7 @@ The web application is divided into two main components - the primary web applic
        a) index.html
        b) dashboard.html 
 
-# Step 02: In your command prompt, create virtual environment.
+### Step 02: In your command prompt, create virtual environment.
 
  #Navigate to project directory
  cd todo-app
@@ -50,10 +79,10 @@ The web application is divided into two main components - the primary web applic
  #On macOS/Linux:
  source venv/bin/activate
 
-# Step 03: Install dependencies.
+### Step 03: Install dependencies.
   Type 'pip install -r requirements.txt'.
 
-# Step 04: Setup MySQL database.
+### Step 04: Setup MySQL database.
   1. Start MySQL Server -
      #Windows: Start MySQL service from Services
      #MacOS: brew services start mysql
@@ -67,7 +96,7 @@ The web application is divided into two main components - the primary web applic
   4. Update database crendentials in app.py
       app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://username:password@localhost/todo_app' (Add your username and root password)
      
-# Step 05: Configure email settings - Using Gmail.
+### Step 05: Configure email settings - Using Gmail.
   1. Enable 2-Factor Authentication in your Google Account.
   2. Generate App password:
      Go to Google Account --> Security --> 2-step verification
@@ -78,17 +107,17 @@ The web application is divided into two main components - the primary web applic
      app.config['MAIL_PASSWORD'] = 'your-16-digit-app-password' //copy paste the generated password
      app.config['MAIL_DEFAULT_SENDER'] = 'your-email@gmail.com' //type your email
 
-# Step 06: Run the application.
+### Step 06: Run the application.
 Type 'python app.py' in your command prompt
 OR run the app.py file in VS Code (If accessing through VS Code!)
   The application will create database tables automatically.
   Start the Flask server on http://localhost:5000
   Initialize the background scheduler for email reminders 
 
-# Step 07: Access the Application.
+### Step 07: Access the Application.
   Open your browser and navigate to 'http://localhost:5000'
 
-# Usage Guide:
+## Usage Guide:
 
 1. Sign Up -
    Click "Sign Up" tab
@@ -113,11 +142,3 @@ OR run the app.py file in VS Code (If accessing through VS Code!)
    Sends email 30 minutes before the due time
    Only sends once per task
 
-# Project Workflow:
-  Authentication FLow -
-  1. Sign Up - User Input --> Password Hashing --> Store in MySQL
-  2. Login - User Input --> Hash Verification --> Flask Login session --> Dashboard
-  3. Session Management - Flask Logins manages user session with cookies, @login_required decorator protects routes
-
-  Task Management Flow -
-  1 CREATE Task
