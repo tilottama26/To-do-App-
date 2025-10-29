@@ -133,27 +133,27 @@ OR run the app.py file in VS Code (If accessing through VS Code!)
 ## Usage Guide:
 
 1. Sign Up -
-   Click "Sign Up" tab
-   Enter your name, email & password
-   Click "Sign Up" button
+   a) Click "Sign Up" tab.
+   b) Enter your name, email & password.
+   c) Click "Sign Up" button.
 2. Login -
-   Now, enter your email and password
-   Click "Login" button
+   a) Now, enter your email and password.
+   b) Click "Login" button
 3. Create Tasks -
-   Fill in the task title (required)
-   Add description (optional)
-   Set due date and time (optional)
-   Click "Add Task"
+   a) Fill in the task title (required).
+   b) Add description (optional).
+   c) Set due date and time (optional).
+   d) Click "Add Task".
 4. Manage Tasks -
-   Mark Complete: Check the checkbox
-   Edit Task: Click "Edit" button
-   Delete Task: Click "Delete" button
-   Filter Tasks: Use "All", "Pending", "Completed" buttons
+   a) Mark Complete: Check the checkbox.
+   b) Edit Task: Click "Edit" button.
+   c) Delete Task: Click "Delete" button.
+   d) Filter Tasks: Use "All", "Pending", "Completed" buttons.
 5. Email Reminders -
-   Set a due date when creating a task
-   System checks every 5 minutes
-   Sends email 30 minutes before the due time
-   Only sends once per task
+   a) Set a due date when creating a task.
+   b) System checks every 5 minutes.
+   c) Sends email 30 minutes before the due time.
+   d) Only sends once per task.
 
 ## API Endpoints:
 
