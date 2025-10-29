@@ -1,15 +1,17 @@
 ## To-do-App
-A full-stack to-do application with automated email reminders using Python Flask for the backend,  MySQL for the database, and HTML/CSS/JavaScript for the frontend. The application includes user authentication, complete CRUD operations, and a background job scheduler for sending email reminders 30 minutes before task due times.
+A full-stack to-do application with automated email reminders. The application includes user authentication, complete CRUD operations, and a background job scheduler for sending email reminders 30 minutes before task due times.
 
 # Tech Stack used: 
 
 Frontend - HTML5, CSS3, JavaScript
+
 Backend - 
   1. Python 3.8+ - Core Programming Language
   2. Flask 3.0 - Lightweight Web Framework
   3. Flask Login - User session management
   4. Flask Mail - Email sending functionality
   5. APScheduler - Background job scheduling
+     
 Database -
   1. MySQL Workbench 8.0 - Relational database
   2. SQLAlchemy - ORM (Object Relational Mapper) for database operations
@@ -36,8 +38,10 @@ The web application is divided into two main components - the primary web applic
 
  #Navigate to project directory
  cd todo-app
+ 
  #Create virtual environment
  python -m venv venv
+ 
  #Activate virtual environment
  
  #On Windows:
@@ -61,7 +65,7 @@ The web application is divided into two main components - the primary web applic
      --OR Manually create database:
      CREATE DATABASE todo_app;
   4. Update database crendentials in app.py
-      app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://username:password@localhost/todo_app' (Add your            username and root password)
+      app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://username:password@localhost/todo_app' (Add your username and root password)
      
 # Step 05: Configure email settings - Using Gmail.
   1. Enable 2-Factor Authentication in your Google Account.
@@ -70,9 +74,9 @@ The web application is divided into two main components - the primary web applic
      Scroll to "App passwords"
      Generate password
   3. Update app.py
-     app.config['MAIL_USERNAME'] = 'your-email@gmail.com'
-     app.config['MAIL_PASSWORD'] = 'your-16-digit-app-password'
-     app.config['MAIL_DEFAULT_SENDER'] = 'your-email@gmail.com'
+     app.config['MAIL_USERNAME'] = 'your-email@gmail.com' //type your email
+     app.config['MAIL_PASSWORD'] = 'your-16-digit-app-password' //copy paste the generated password
+     app.config['MAIL_DEFAULT_SENDER'] = 'your-email@gmail.com' //type your email
 
 # Step 06: Run the application.
 Type 'python app.py' in your command prompt
@@ -86,25 +90,36 @@ OR run the app.py file in VS Code (If accessing through VS Code!)
 
 # Usage Guide:
 
-1. Sign Up
+1. Sign Up -
    Click "Sign Up" tab
    Enter your name, email & password
    Click "Sign Up" button
-2. Login
+2. Login -
    Now, enter your email and password
    Click "Login" button
-3. Create Tasks
+3. Create Tasks -
    Fill in the task title (required)
    Add description (optional)
    Set due date and time (optional)
    Click "Add Task"
-4. Manage Tasks
+4. Manage Tasks -
    Mark Complete: Check the checkbox
    Edit Task: Click "Edit" button
    Delete Task: Click "Delete" button
    Filter Tasks: Use "All", "Pending", "Completed" buttons
-5. Email Reminders
+5. Email Reminders -
    Set a due date when creating a task
    System checks every 5 minutes
    Sends email 30 minutes before the due time
-   Only sends once per task 
+   Only sends once per task
+
+# Project Workflow:
+
+# Project Workflow:
+  Authentication FLow -
+  1. Sign Up - User Input --> Password Hashing --> Store in MySQL
+  2. Login - User Input --> Hash Verification --> Flask Login session --> Dashboard
+  3. Session Management - Flask Logins manages user session with cookies, @login_required decorator protects routes
+
+  Task Management Flow -
+  1 CREATE Task
