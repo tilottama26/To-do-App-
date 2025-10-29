@@ -169,31 +169,31 @@ OR run the app.py file in VS Code (If accessing through VS Code!)
 
 ## Testing the Application:
 
-# Test Scenario 1 - User Registration and Login 
+### Test Scenario 1 - User Registration and Login 
 1. Create a new account with email and password
 2. Verify you're redirected to dashboard
 3. Logout and login again with the same credentials
 
-# Test Scenario 2 - Task CRUD Operations 
+### Test Scenario 2 - Task CRUD Operations 
 1. Create: Add 3-4 tasks with different due dates
 2. Read: Verify all tasks appear in the list
 3. Update: Edit a task title and description
 4. Delete: Remove a task and confirm deletion
 
-# Test Scenario 3 - Task Completion 
+### Test Scenario 3 - Task Completion 
 1. Create several tasks
 2. Mark some as completed (checkbox)
 3. Use filter buttons to view pending/completed tasks
 4. verify completed tasks show with strikethrough
 
-# Test Scenario 4 - Email Reminders 
+### Test Scenario 4 - Email Reminders 
 1. Create a task with due date 30 minutes from now
 2. Wait for scheduler to run (checks every 5 minutes)
 3. Check your email or console logs after ~5-10 minutes
 4. Verify reminder email was sent
 5. Confirm reminder_sent flag prevents duplicate emails
 
-# Test Scenario 5 - Overdue Tasks 
+### Test Scenario 5 - Overdue Tasks 
 1. Create a task with due date in the past
 2. Verify it shows "Overdue!" in red text
 3. Complete the task to remove the overdue status
