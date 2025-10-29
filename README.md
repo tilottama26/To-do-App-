@@ -47,19 +47,20 @@ The web application is divided into two main components - the primary web applic
 
 ## Folder Structure:
 
-```` ``` `
-TODO-APP\
-  __pycache__\
-    models.cpython-312.pyc
-    scheduler.cpython-312.pyc
-  templates\
-    dashboard.html
-    index.html
-  venv\
-  app.py\
-  models.py\
-  requirements.txt\
-  scheduler.py
+``` 
+TODO-APP/
+  |-- __pycache__/
+  |    |__ models.cpython-312.pyc
+  |    |__ scheduler.cpython-312.pyc
+  |-- templates/
+      |__ dashboard.html
+      |__ index.html
+  |-- venv/
+  |-- app.py/
+  |-- models.py/
+  |-- requirements.txt/
+  |-- scheduler.py
+```
 
 ## Installation & Setup:
 ### Pre-requisites - Python 3.8+, MySQL Server, pip (Python Package Manager)
