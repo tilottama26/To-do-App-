@@ -114,8 +114,6 @@ OR run the app.py file in VS Code (If accessing through VS Code!)
    Only sends once per task
 
 # Project Workflow:
-
-# Project Workflow:
   Authentication FLow -
   1. Sign Up - User Input --> Password Hashing --> Store in MySQL
   2. Login - User Input --> Hash Verification --> Flask Login session --> Dashboard
