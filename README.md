@@ -49,13 +49,10 @@ The web application is divided into two main components - the primary web applic
 
 ``` 
 TODO-APP/
-  |-- __pycache__/
-  |    |__ models.cpython-312.pyc
-  |    |__ scheduler.cpython-312.pyc
+  |-- screenshots
   |-- templates/
       |__ dashboard.html
       |__ index.html
-  |-- venv/
   |-- app.py/
   |-- models.py/
   |-- requirements.txt/
