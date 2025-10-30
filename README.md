@@ -68,8 +68,7 @@ TODO-APP/
   3. scheduler.py
   4. config.py
   5. requirements.txt
-  6. init.sql
-  7. templates
+  6. templates
        a) index.html
        b) dashboard.html 
 
